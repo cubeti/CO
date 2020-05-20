@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" style="-fx-border-color: purple; -fx-border-width: 10; -fx-background-color: yellow;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.project.controllers.BenchController">
+   <children>
+      <Label alignment="CENTER" layoutX="276.0" layoutY="60.0" prefHeight="104.0" prefWidth="249.0" text="CPU Bench">
+         <font>
+            <Font name="System Bold Italic" size="34.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="runs" layoutX="375.0" layoutY="186.0" prefWidth="150.0" />
+      <Label layoutX="189.0" layoutY="184.0" text="Number of runs">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Button layoutX="114.0" layoutY="499.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#start" prefHeight="60.0" prefWidth="150.0" text="Start">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Button>
+      <Button layoutX="525.0" layoutY="499.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#stop" prefHeight="60.0" prefWidth="150.0" text="Stop">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Button>
+      <Button layoutX="325.0" layoutY="499.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#log" prefHeight="60.0" prefWidth="150.0" text="Log">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Button>
+      <Text fx:id="text" layoutX="170.0" layoutY="356.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="388.6708984375" />
+   </children>
+</AnchorPane>
