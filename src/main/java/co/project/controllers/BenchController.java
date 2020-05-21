@@ -1,11 +1,13 @@
 package co.project.controllers;
 
+import co.project.bench.Benchmark;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.text.Text;
 
 public class BenchController {
+    Benchmark x;
     @FXML
     private Text text;
     @FXML
@@ -20,8 +22,12 @@ public class BenchController {
     }
     @FXML
     public void stop(ActionEvent actionEvent) {
+        x.cancel();
     }
     @FXML
     public void start(ActionEvent actionEvent) {
+        x = new Benchmark();
+        x.initialize(Runtime.getRuntime().availableProcessors(),Integer.parseInt(runs.getValue()));
+        x.run();
     }
 }
